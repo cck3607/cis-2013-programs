@@ -6,14 +6,14 @@
 //Else determine letter grade based upon the typical A = 90%, B - 80%, etc.
 //Output stringFinalGrade
 
-var intGradeOption, floatTotalPts, floatHwPts, floatMidPts, floatFinPts, stringFinalGrade, stringMessage;
-stringMessage = "";
+var intGradeOption, floatTotalPts, floatHwPts, floatMidPts, floatFinPts, stringFinalGrade;
+stringFinalGrade = "";
 
 floatHwPts = parseFloat(prompt("Please enter final HW pts (0-30):"));
 
-floatMidPts = parseFloat(prompt("Please enter final Mid pts (0-30):"));
+floatMidPts = parseFloat(prompt("Please enter final Mid pts (0-35):"));
 
-floatFinPts = parseFloat(prompt("Please enter final Fin pts (0-30):"));
+floatFinPts = parseFloat(prompt("Please enter final Fin pts (0-35):"));
 
 floatTotalPts = parseFloat(floatHwPts + floatMidPts + floatFinPts);
 
@@ -23,11 +23,11 @@ if (intGradeOption===1)
      {
     if(floatTotalPts >= 80)
     {
-        stringMessage = "Pass";
+        stringFinalGrade = "Pass";
     }
       else
       {
-            stringMessage = "Fail";
+            stringFinalGrade = "Fail";
         }
       }
 
@@ -36,23 +36,38 @@ if (intGradeOption===2)
 {
     if(floatTotalPts >= 90)
     {
-        stringMessage = "A";
+        stringFinalGrade = "A";
     }
        else
        {
         if(floatTotalPts >= 80 && floatTotalPts <90)
         {
-            stringMessage = "B";
+            stringFinalGrade = "B";
         }
         else
          {
             if (floatTotalPts >= 70 && floatTotalPts <80)
             {
-                stringMessage = "C";
+                stringFinalGrade = "C";
             }
+        else
+        {
+            if(floatTotalPts >= 60 && floatTotalPts <70)
+            {
+                stringFinalGrade = "D";
+            }
+        else
+        {
+            if(floatTotalPts >= 0 && floatTotalPts <60)
+            {
+                stringFinalGrade = "F";
+            }
+        }
          }
        }
 }
+}
+
 
 
 
