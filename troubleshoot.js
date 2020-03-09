@@ -74,6 +74,7 @@ var fixPrinter = function() {
                 }
             }
             }
+            $("output").value = stringOutput;
         };
   
     
