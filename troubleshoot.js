@@ -73,9 +73,10 @@ var fixPrinter = function() {
                     stringOutput = stringMessage6;
                 }
             }
-            }
+            
             $("output").value = stringOutput;
-        };
+        }
+    };
   
     
     
