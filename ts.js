@@ -50,7 +50,8 @@ var fixPrinter = function() {
         case boolPrinting == false && boolRedLight == false && boolRecognised == false:
             stringOutput = stringMessage6;
             break;
-     }    
+     }
+     $("output").value = stringOutput;
 };
 window.onload = function () {
     $("troubleshoot").onclick = fixPrinter;
