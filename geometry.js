@@ -77,7 +77,7 @@ var calcRectArea = function()
     var floatRectWidth = parseFloat($("rect_width").value);
     var floatRectHeight = parseFloat($("rect_height").value);
     alert ("The rectangle area is " + rectArea(floatRectHeight, floatRectWidth));
-}
+};
 
 function rectArea(floatRectWidth_par, floatRectHeight_par)
 {
@@ -90,7 +90,7 @@ var calcRectPerim = function()
     var floatRectWidth = parseFloat($("rect_width").value);
     var floatRectHeight = parseFloat($("rect_height").value);
     alert ("The rectangle perimeter is " + rectPerim(floatRectHeight, floatRectWidth));
-}
+};
 
 function rectPerim(floatRectWidth_par, floatRectHeight_par)
 {
@@ -105,7 +105,7 @@ var calcTriArea = function()
     var floatTriSide3 = parseFloat($("tri_side3").value);
     
     alert ("The triangle area is " + triArea(floatTriSide1, floatTriSide2, floatTriSide3));
-}
+};
 
 function triArea(floatSide1, floatSide2, floatSide3)
 {
@@ -115,6 +115,20 @@ function triArea(floatSide1, floatSide2, floatSide3)
     return floatArea.toFixed(2);
 }
 
+var calcTriPerim = function()
+{
+    var floatTriSide1 = parseFloat($("tri_side1").value);
+    var floatTriSide2 = parseFloat($("tri_side2").value);
+    var floatTriSide3 = parseFloat($("tri_side3").value);
+    
+    alert ("The triangle perimeter is " + triPerim(floatTriSide1, floatTriSide2, floatTriSide3));
+};
+
+function triPerim (floatSide1, floatSide2, floatSide3)
+{
+    var floatPerim = floatSide1 +floatSide2 + floatSide3;
+    return floatPerim.toFixed(2);
+}
 window.onload = function () 
 {
     //lines 51-56 clear the DOM values..
@@ -127,6 +141,8 @@ window.onload = function ()
     $("rect_width").focus(); // places the cursor in the first input box
     $("calc_all").onclick = do_it; // runs the do_it function when clicked
     $("calc_circle_circum").onclick = calcCircleCircum;
-    $("calc_rect_area").onclick = calcRectArea;// runs the calcCircleCircum function when clicked
+    $("calc_rect_area").onclick = calcRectArea;
+    $("calc_rect_perim").onclick = calcRectPerim;// runs the calcCircleCircum function when clicked
     $("calc_tri_area").onclick = calcTriArea;
+    $("calc_tri_perim").onclick = calcTriPerim;
 };
