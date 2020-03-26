@@ -98,18 +98,35 @@ function rectPerim(floatRectWidth_par, floatRectHeight_par)
     return floatRectPerim.toFixed(2);
 }
 
+var calcTriArea = function()
+{
+    var floatTriSide1 = parseFloat($("tri_side1").value);
+    var floatTriSide2 = parseFloat($("tri_side2").value);
+    var floatTriSide3 = parseFloat($("tri_side3").value);
+    
+    alert ("The triangle area is " + triArea(floatTriSide1, floatTriSide2, floatTriSide3));
+}
+
+function triArea(floatSide1, floatSide2, floatSide3)
+{
+    var floatS = (floatSide1 + floatSide2 + floatSide3)/2;
+	var floatArea = Math.sqrt((floatS*(floatS-floatSide1)*(floatS-floatSide2)*(floatS-floatSide3)));
+
+    return floatArea.toFixed(2);
+}
+
 window.onload = function () 
 {
     //lines 51-56 clear the DOM values..
-//    $("rect_width").value = "";
-//    $("rect_height").value = "";
-//    $("tri_side1").value = "";
-//    $("tri_side2").value = "";
-//    $("tri_side3").value = "";
-//    $("radius").value = "";
+    $("rect_width").value = "";
+     $("rect_height").value = "";
+     $("tri_side1").value = "";
+     $("tri_side2").value = "";
+     $("tri_side3").value = "";
+     $("radius").value = "";
     $("rect_width").focus(); // places the cursor in the first input box
     $("calc_all").onclick = do_it; // runs the do_it function when clicked
     $("calc_circle_circum").onclick = calcCircleCircum;
     $("calc_rect_area").onclick = calcRectArea;// runs the calcCircleCircum function when clicked
-    
+    $("calc_tri_area").onclick = calcTriArea;
 };
