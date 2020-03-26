@@ -76,13 +76,28 @@ var calcRectArea = function()
 {
     var floatRectWidth = parseFloat($("rect_width").value);
     var floatRectHeight = parseFloat($("rect_height").value);
+    alert ("The rectangle area is " + rectArea(floatRectHeight, floatRectWidth));
 }
 
 function rectArea(floatRectWidth_par, floatRectHeight_par)
 {
-    var floatRectArea = floatRectWidth_par + floatRectHeight_par;
+    var floatRectArea = floatRectWidth_par * floatRectHeight_par;
     return floatRectArea.toFixed(2);
 }
+
+var calcRectPerim = function()
+{
+    var floatRectWidth = parseFloat($("rect_width").value);
+    var floatRectHeight = parseFloat($("rect_height").value);
+    alert ("The rectangle perimeter is " + rectPerim(floatRectHeight, floatRectWidth));
+}
+
+function rectPerim(floatRectWidth_par, floatRectHeight_par)
+{
+    var floatRectPerim = (2 * floatRectWidth_par) + (2 * floatRectHeight_par);
+    return floatRectPerim.toFixed(2);
+}
+
 window.onload = function () 
 {
     //lines 51-56 clear the DOM values..
@@ -94,6 +109,7 @@ window.onload = function ()
 //    $("radius").value = "";
     $("rect_width").focus(); // places the cursor in the first input box
     $("calc_all").onclick = do_it; // runs the do_it function when clicked
-    $("calc_circle_circum").onclick = calcCircleCircum; // runs the calcCircleCircum function when clicked
+    $("calc_circle_circum").onclick = calcCircleCircum;
+    $("calc_rect_area").onclick = calcRectArea;// runs the calcCircleCircum function when clicked
     
 };
