@@ -18,7 +18,7 @@ var do_it = function ()
 	var floatRectArea;
 	var floatRectPerim;
 	var floatS;
-	var floatTriangeArea;
+
 	var floatTrianglePerim;
 	var floatCircleArea;
 	var floatCircleCircum;	
@@ -129,6 +129,19 @@ function triPerim (floatSide1, floatSide2, floatSide3)
     var floatPerim = floatSide1 +floatSide2 + floatSide3;
     return floatPerim.toFixed(2);
 }
+
+var calcCircleArea = function()
+{
+     var floatRadius = parseFloat($("radius").value);
+     
+     alert ("The circle area is " + circleArea(floatRadius));
+};
+
+function circleArea (floatRadius)
+{
+    var floatArea = Math.PI * Math.pow(floatRadius,2);
+    return floatArea.toFixed(2);
+}
 window.onload = function () 
 {
     //lines 51-56 clear the DOM values..
@@ -145,4 +158,5 @@ window.onload = function ()
     $("calc_rect_perim").onclick = calcRectPerim;// runs the calcCircleCircum function when clicked
     $("calc_tri_area").onclick = calcTriArea;
     $("calc_tri_perim").onclick = calcTriPerim;
+    $("calc_circle_area").onclick = calcCircleArea;
 };
