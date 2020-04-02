@@ -27,11 +27,11 @@ while (isNaN(intMin)||intMin<0)
  * number is at least 2 more than the minimum (so that there is some guessing involved).
 */
 
-intMax = parseInt(prompt("please enter a number which is at least" + (intMin +2) + "for your max number "));
+intMax = parseInt(prompt("please enter a number which is at least " + (intMin +2) + " for your max number "));
 
 while (isNaN(intMax)||intMax < (intMin +2))
 {
-    intMax= parseInt(prompt("Sorry but you need to enter a number greater than or equal to zero" + (intMin +2) + "for your max number"));
+    intMax= parseInt(prompt("Sorry but you need to enter a number greater than or equal to zero " + (intMin +2) + " for your max number"));
 }
 
 /*The following line of code generates the random number to be used in the guessing game.
@@ -46,7 +46,7 @@ while (intGuess != intRandom)
 {
     if(intGuess < intRandom)
     {
-        intGuess = parseInt(prompt("Your guess of" + intGuess + " is too low. Guess again"));
+        intGuess = parseInt(prompt("Your guess of " + intGuess + " is too low. Guess again"));
         while (isNaN(intGuess)||intGuess <intMin || intGuess > intMax)
         {
             intGuess = parseInt(prompt("You nedd to choose a number between " + intMin + " and " + intMax));
@@ -54,7 +54,7 @@ while (intGuess != intRandom)
     }
     else
     {
-        intGuess = parseInt(prompt("Your guess of" + intGuess + " is too high. Guess again"));
+        intGuess = parseInt(prompt("Your guess of " + intGuess + " is too high. Guess again"));
         while (isNaN(intGuess)||intGuess <intMin || intGuess > intMax)
         {
             intGuess = parseInt(prompt("You nedd to choose a number between " + intMin + " and " + intMax));
@@ -72,11 +72,11 @@ while (intGuess != intRandom)
  * number is between the allowed max and min number choices.
 */
 
-intGuess = parseInt(prompt("please enter a number between" + intMin + " and " + intMax));
+intGuess = parseInt(prompt("please enter a number between " + intMin + " and " + intMax));
 
 while (isNaN(intGuess)||intGuess <intMin || intGuess > intMax)
 {
-    intGuess= parseInt(prompt("please enter a number between" + intMin + " and " + intMax));
+    intGuess= parseInt(prompt("please enter a number between " + intMin + " and " + intMax));
 }
 
 
