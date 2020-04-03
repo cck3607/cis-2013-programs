@@ -41,7 +41,19 @@ while (isNaN(intMax)||intMax < (intMin +2))
  * the addition of + intMin provides the floor for the random number 
  */
 intRandom = parseInt (Math.floor(Math.random()*(intMax-intMin+1))+intMin);
-intCount =1;
+intCount = 1;
+
+
+
+intGuess = parseInt(prompt("please enter a number between " + intMin + " and " + intMax));
+
+while (isNaN(intGuess)||intGuess <intMin || intGuess > intMax)
+{
+    intGuess= parseInt(prompt("please enter a number between " + intMin + " and " + intMax));
+}
+
+
+
 while (intGuess != intRandom)
 {
     if(intGuess < intRandom)
@@ -72,12 +84,6 @@ while (intGuess != intRandom)
  * number is between the allowed max and min number choices.
 */
 
-intGuess = parseInt(prompt("please enter a number between " + intMin + " and " + intMax));
-
-while (isNaN(intGuess)||intGuess <intMin || intGuess > intMax)
-{
-    intGuess= parseInt(prompt("please enter a number between " + intMin + " and " + intMax));
-}
 
 
 
