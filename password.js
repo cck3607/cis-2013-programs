@@ -51,7 +51,7 @@ var passwordCheckOld = function ()
 window.onload = function () 
 {
    $("password").value = "";
-   $("output").value = stringOutput;
+   //$("output").value = stringOutput;
    $("password").focus();
    $("check_password").onclick = passwordCheckOld;
 };
