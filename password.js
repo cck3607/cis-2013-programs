@@ -44,7 +44,7 @@ var passwordCheckOld = function ()
 
 window.onload = function () 
 {
-//    $("password").value = "";
+   $("password").value = "";
    $("password").focus();
    $("check_password").onclick = passwordCheckOld;
 };
