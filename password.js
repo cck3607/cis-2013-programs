@@ -28,24 +28,28 @@ var passwordCheckOld = function ()
   if (count<8)
   {
     stringOutput  = ("The password you entered is too short");
-    return stringOutput;
+    $("output").value = stringOutput;
+    return $("output").value;
     //return stringOutput;
   }
   for (j = 0; j< arrayBadPasswords.length; j++)
   {
     if(arrayBadPasswords[j]==stringInput){
        stringOutput = ("The password is a bad password");
-       return stringOutput;
+       return $("output").value;
+      // return stringOutput;
     }
   }
  
      srtingOutput= ("The password is valid");
-     return stringOutput;
+     return $("output").value;
+     //return stringOutput;
 };
 
 window.onload = function () 
 {
-   $("password").value = "";
+  // $("password").value = "";
+   $("output").value = stringOutput;
    $("password").focus();
    $("check_password").onclick = passwordCheckOld;
 };
