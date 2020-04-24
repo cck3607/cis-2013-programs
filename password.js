@@ -20,7 +20,7 @@ var passwordCheckOld = function ()
   var i;
   var count =0;
   var j;
-  for (i = 0; i< stringInput.length; i++)
+  for (i = 0; i< stringPassword.length; i++)
   {
     count ++; 
   }
@@ -34,7 +34,7 @@ var passwordCheckOld = function ()
   }
   for (j = 0; j< arrayBadPasswords.length; j++)
   {
-    if(arrayBadPasswords[j]==stringInput){
+    if(arrayBadPasswords[j]==stringPassword){
        stringOutput = ("The password is a bad password");
        document.getElementById("output").innerHTML = stringOutput;
        //return $("output").value;
