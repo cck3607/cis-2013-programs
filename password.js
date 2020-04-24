@@ -16,7 +16,7 @@ var passwordCheckOld = function ()
   /* insert code
    * here
    */
-  stringInput = parseString(prompt("Enter your password "));
+  //stringInput = (prompt("Enter your password "));
   var i;
   var count =0;
   var j;
