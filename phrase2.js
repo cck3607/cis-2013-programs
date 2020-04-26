@@ -16,7 +16,7 @@ var vowels = function ()
 	{
 		var intVowels = 0;
 		//insert for loop here
-		for(var intCount = 0; intCount < stringEntry; intCount++)
+		for (var intCount = 0; intCount < stringEntry.length; intCount++)
         {
             if(stringEntry.charAt(intCount)==="A" || stringEntry.charAt(intCount)==="E" || stringEntry.charAt(intCount)==="I" || stringEntry.charAt(intCount)==="O" || stringEntry.charAt(intCount)==="U")
             {
@@ -42,7 +42,7 @@ var consonants = function ()
 	{
 		var intConsonants = 0;
 		// insert for loop here
-		for(var intCount =0; intCount < stringEntry; intCount++)
+		for(var intCount =0; intCount < stringEntry.length; intCount++)
         {
             switch (stringEntry.charAt(intCount))
             {
