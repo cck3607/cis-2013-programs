@@ -16,9 +16,9 @@ var vowels = function ()
 	{
 		var intVowels = 0;
 		//insert for loop here
-		for(var intCount =0; intCount < stringEntry; intCount++)
+		for(var intCount = 0; intCount < stringEntry; intCount++)
         {
-            if(stringEntry.charAt(intCount)==="A" || stringEntry.charAt(intCount)==="E" || stringEntry.charAt(intCount)==="I" || stringEntry.charAt(intCount)==="O" || stringEntry.charAt(intCount)==="U");
+            if(stringEntry.charAt(intCount)==="A" || stringEntry.charAt(intCount)==="E" || stringEntry.charAt(intCount)==="I" || stringEntry.charAt(intCount)==="O" || stringEntry.charAt(intCount)==="U")
             {
                intVowels++;
             }
@@ -44,23 +44,25 @@ var consonants = function ()
 		// insert for loop here
 		for(var intCount =0; intCount < stringEntry; intCount++)
         {
-            switch(stringEntry.charAt(intCount))
-            case "a";
-            case "e";
-            case "i";
-            case "o";
-            case "u";
-            case " ";
+            switch (stringEntry.charAt(intCount))
+            {
+            case "a":
+            case "e":
+            case "i":
+            case "o":
+            case "u":
+            case " ":
                 break;
-            default;
+            default:
                 intConsonants++;
                 break;
+            }
         }
 		
 		
 		$("output").value = "There are " + intConsonants + " consonants in the above phrase.";
 	}
-}
+};
 
 var reverse = function () 
 {
@@ -82,13 +84,13 @@ var reverse = function ()
 		
 		$("output").value = "The reverse of the above phrase is:\n" + stringReversed;
 	}
-}
+};
 
 var clear = function () 
 {
 	$("phrase").value = "";
     $("output").value = "";
-}
+};
 
 window.onload = function () 
 {
@@ -99,4 +101,4 @@ window.onload = function ()
     $("consonants").onclick = consonants; //runs the calculate_click function when clicked
     $("reverse").onclick = reverse; //runs the calculate_click function when clicked
     $("clear").onclick = clear; //runs the calculate_click function when clicked        
-}  
+};  
