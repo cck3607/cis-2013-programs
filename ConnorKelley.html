@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Vowel Counter</title>
+    <link rel="stylesheet" href="vowel.css">
+</head>
+<input type="button" id="runCountVowels" value="ConnorKelley" onclick="main(); "/>
+<br>
+				<label for="vowel_output">Number of Vowels:</label>
+                <input type="text" id = "vowel_output" name="vowel_output" disabled>
+                <br>
+<body>
+    <script>
+        var $ = function(id) {
+	return document.getElementById(id);
+};
+       function main() {
+        $("vowel_output").value="";
+        var inputChoice;
+        var runningTotal =0;
+        
+        
+        for(; ;){
+                runningTotal =0;
+                inputChoice = prompt("Enter a string *** to quit");
+            if(inputChoice == "***")break;
+      
+                if(isNaN(inputChoice));
+                     inputChoice.toLowerCase();
+        for(var i =0; i <inputChoice.length; i++){
+             if(inputChoice[i]=='a')
+                 runningTotal++;
+             if(inputChoice[i]=='e')
+                 runningTotal++;
+             if(inputChoice[i]=='i')
+                 runningTotal++;
+             if(inputChoice[i]=='o')
+                runningTotal++;
+            if(inputChoice[i]=='u')
+                 runningTotal++;
+       // alert("There were " + runningTotal + " vowels");
+        }//for ++
+        alert("There were " + runningTotal + " vowels");
+        $("vowel_output").value = runningTotal;
+        // alert("There were " + runningTotal + " vowels");
+     }//for
+     // return runningTotal;
+     //alert("There were " + runningTotal + " vowels");
+    }//main
+     // function printValues(){
+       // for(;;){
+         //   var numberOfVowels = main();
+        //    alert("There were " + numberOfVowels + " vowels");
+       // }
+    //  }//printvalues
+     // printValues();
+        
+        
+        
+        
+    </script>
+
+
+</body>
+</html>
