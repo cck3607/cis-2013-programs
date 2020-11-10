@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<head>
+   <meta charset="UTF-8">
+   <title>MyCalculator</title>
+  <link rel="stylesheet" href="">
+</head>
+<body>
+    <main>
+        
+        <script>
+          
+          var inputOne;
+          var inputTwo;
+          var whichCalc;
+          var answer;
+         //debug var sum =0;
+         //debug var input = "";
+         //debug var count =0;
+        
+ //DEBUG Calculate = function() {
+   for(; ;){
+    var sum =0;
+    var input = "";
+    var count =0;
+   
+    for(; ;){
+    whichCalc = parseInt(prompt("1.Add \n 2.Subtract \n 3.Multiply \n 4.Divide \n 5.Exponent \n 6.Mean \n 7.Quit"));
+    if(whichCalc >0 && whichCalc < 8)break;
+            }//menu
+   if(whichCalc ==1){
+    for(;;){
+     inputOne = parseFloat(prompt("Enter your first number to add"));
+    if(isNaN(inputOne)){
+      alert("Enter a valid number");
+      continue;
+    }
+    break;
+          }//for first q add
+    
+    for(;;){
+    inputTwo = parseFloat(prompt("Enter your second number to add to " +inputOne));
+    if(isNaN(inputTwo))
+    alert("please enter a valid number");
+    else
+     break;
+          }//for second q add
+    answer = (inputOne + inputTwo);
+    alert("The answer is: " + answer);
+     
+    }//add
+   
+  
+   
+   if(whichCalc ==2){
+    for(;;){
+    inputOne = parseFloat(prompt("Enter your first number to subract"));
+    if(isNaN(inputOne))
+    alert("please enter a valid number");
+    else
+    break;
+          }//for first q subtract
+    
+    for(;;){
+    inputTwo = parseFloat(prompt("Enter your second number to subract to " +inputOne));
+    if(isNaN(inputTwo))
+    alert("please enter a valid number");
+    else
+    break;
+          }//for second q subtract
+    answer = (inputOne - inputTwo);
+    alert("The answer is: " + answer);
+   }//subtract
+   
+    if(whichCalc ==3){
+   for(;;){
+    inputOne = parseFloat(prompt("Enter your first number to multiply"));
+    if(isNaN(inputOne))
+    alert("please enter a valid number");
+    else
+    break;
+          }//for first q multiply
+    
+    for(;;){
+    inputTwo = parseFloat(prompt("Enter your second number to multiply to " +inputOne));
+    if(isNaN(inputTwo))
+    alert("please enter a valid number");
+    else
+    break;
+          }//for second q mulitply
+    answer = (inputOne * inputTwo);
+    alert("The answer is: " + answer);
+   }//multiply
+   
+    if(whichCalc ==4){
+     for(;;){
+    inputOne = parseFloat(prompt("Enter your first number to divide"));
+    if(isNaN(inputOne))
+    alert("please enter a valid number");
+    else
+    break;
+           }//for first q divide
+    
+    for(;;){
+    inputTwo = parseFloat(prompt("Enter your second number to divide from " +inputOne));
+    if(isNaN(inputTwo))
+    alert("please enter a valid number");
+    else
+    break;
+           }//for second q divide
+    answer = (inputOne / inputTwo);
+    alert("The answer is: " + answer);
+   }//divide
+   
+    if(whichCalc ==5){
+    for(;;){
+    inputOne = parseFloat(prompt("Enter your base number"));
+    if(isNaN(inputOne))
+    alert("please enter a valid number");
+    else
+    break;
+          }//for first q expo
+    
+    for(;;){
+    inputTwo = parseFloat(prompt("Enter your exponent for a base of " +inputOne));
+    if(isNaN(inputTwo))
+    alert("please enter a valid number");
+    else
+    break;
+          }//for second q expo
+    answer = Math.pow(inputOne, inputTwo);
+    alert("The answer is: " + answer);
+   }//exponent
+   
+   if(whichCalc ==6){
+   //input = parseFloat(prompt("Enter a series of numbers *** to quit");
+  // while(isNaN(input) || input == "***"){
+    for(;;){
+    input = prompt("Enter a series of numbers *** to quit");
+    if(input == "***")
+    break;
+    
+    input = parseFloat(input);
+    if(!(isNaN(input))){
+    count++;
+    sum += input;
+          }//if
+     }//for
+      var avg = parseFloat(sum/count);
+   
+   alert("Your mean is " + avg);
+   }//if
+    
+    if(whichCalc ==7){
+    alert("Thank you come agian! ");
+        }//quit
+     
+   //for main menu
+   }
+        </script>
+    </main>
+   <section>
+        <h1></h1>
+   </section>
+</body>
