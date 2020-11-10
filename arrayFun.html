@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <script>
+        function arrayFun(){
+            var numbers = [];
+            numbers[0] = 1000;
+            numbers[99] = 2000;
+            alert("Length of numbers is " + numbers.length);
+            var numbersString ="";
+            for(var i = 0; i < numbers.length; i++){
+                numbersString += numbers[i] + " | ";
+            }//for
+            alert("Array elements after for loop \n" + numbersString);
+            numbersString = "";
+            for (i in numbers){
+                numbersString += numbers[i] + " | ";
+                
+            }//forin
+            alert("Array elements after for in loop \n" + numbersString);
+        }
+       // arrayFun();
+       function ranNumArray(){
+        
+       }
+    </script>
+
+
+</body>
+</html>
