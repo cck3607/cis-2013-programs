@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<head>
+   <meta charset="UTF-8">
+   <title>Unicode</title>
+   <script>
+   var lowerBond;
+   var upperBound;
+  // var lowerCaseLetters = "abcdefghijklmnopqrstuvwxyz";
+  //  var upperCaseLetters = lowerCaseLetters.toUpperCase();
+   var output="";
+  // lowerBond = parseInt(prompt("Enter lower bound greater than 0"));
+   
+   //lowerBond = String.fromCharCode(lowerBond);
+   
+  // alert(lowerBond);
+  //lowerBond = parseInt(prompt("Enter lower bound greater than 0"));
+ //  for(  ;isNaN(lowerBond) || lowerBond<=0;){
+  //     lowerBond = parseInt(prompt("Enter lower bound greater than 0"));
+   
+   
+  // for(lowerBond = parseInt(prompt("Enter lower bound greater than 0")); isNaN(lowerBond) || lowerBond <=0; lowerBond = parseInt(prompt("Enter lower bound greater than 0")));
+   for (; ;){
+      lowerBond = parseInt(prompt("Enter Lower Bound greater than 0"));
+      if(!(isNaN(lowerBond)) && (lowerBond > 0) )  break;
+   }
+  // alert(lowerBond);
+    
+  // for(upperBound = parseInt(prompt("Enter upper bound greater than lower bound")); isNaN(upperBound) || upperBound <= lowerBond; upperBound = parseInt(prompt("Enter upper bound greater than lower bound")));
+        for (; ;){
+      upperBound = parseInt(prompt("Enter upper Bound greater than lower bound"));
+      if(!(isNaN(upperBound)) && (upperBound > 0) && (upperBound > lowerBond) ) break;
+   }
+   // alert(lowerBond +" " + upperBound);
+    
+    for (var i = lowerBond; i < upperBound; i++){
+      output += i + ":  " + String.fromCharCode(i) + "\n";
+    }
+    alert(output);
+   </script>
+</head>
+<body>
+   <section>
+        <h1></h1>
+   </section>
+</body>

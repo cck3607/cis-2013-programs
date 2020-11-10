@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<head>
+   <meta charset="UTF-8">
+   <title>Unicode</title>
+   <script>
+    var lowerCaseLetters = "abcdefghijklmnopqrstuvwxyz";
+    var upperCaseLetters = lowerCaseLetters.toUpperCase();
+    var outputstr = "";
+    
+    for(var i =0; i < upperCaseLetters.length; i++){
+        
+        outputstr += upperCaseLetters.charAt(i) + " " + upperCaseLetters.charCodeAt(i) + "\n";
+    }
+    
+   //debug alert(outputstr);
+    
+   for(var i = 0; i < lowerCaseLetters.length; i++){
+        
+       outputstr += lowerCaseLetters.charAt(i) + " " + lowerCaseLetters.charCodeAt(i) + "\n";
+   }
+    
+    alert(outputstr);
+   </script>
+</head>
+<body>
+   <section>
+        <h1></h1>
+   </section>
+</body>
