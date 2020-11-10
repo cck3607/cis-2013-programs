@@ -6,6 +6,7 @@
 	</head>
 	<body>
 		<main>
+			<div id="content">
 			<h1>Enter the values below and click calculate</h1>
 			<form id="tax_form" name="tax_form" onsubmit="return taxForm();"   method="post">
 				<label for="Subtotal">Subtotal:</label>
@@ -31,11 +32,12 @@
 				<label for="Total_tax">Total:</label>
                 <input type="text" id = "Total_tax" name="Total_tax" disabled>
                 <br>
-				
+			
 				<label>&nbsp;</label>
 				<input type="submit" id="calc_button" value="Calculate your tax">
 				<input type="reset" id = "reset_calc" name = "reset_calc">
 			</form>
+			</div>
 		</main>
 	</body>
 </html>
