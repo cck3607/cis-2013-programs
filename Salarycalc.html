@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<head>
+   <meta charset="UTF-8">
+   <title>Unicode</title>
+   <script>
+   var empName, baseSal, totalSal,bouns,doAgain;
+   alert("Welcome!");
+   
+   for(;;){
+   for(; ;){
+    empName = prompt("Enter employee name must be at least two characters");
+    if(empName.length >= 2) break;
+              }//name
+   for(; ;){
+    baseSal = parseInt(prompt("Enter base salary"));
+    if(baseSal>0)break;
+          }//salary
+   for(; ;){
+    totalSal = parseInt(prompt("Enter total sales"));
+    if(totalSal>0)break;
+         }//sales
+      
+  if(totalSal > 1 && totalSal < 25000){
+   bouns =(totalSal*0.05);
+   alert(baseSal+bouns);
+      }//bouns.05
+  if(totalSal>25000 && totalSal < 50000){
+    bouns=(totalSal/0.10);
+    alert(baseSal+bouns);
+      }//bouns.1
+  if(totalSal>50001 && totalSal < 100000){
+    bouns=(totalSal/0.15);
+    alert(baseSal+bouns);
+      }//bouns.15
+  if(totalSal>100000){
+    bouns=(totalSal/0.20);
+    alert(baseSal+bouns);
+    }//bouns.s
+  for(; ;){
+    doAgain = prompt("Continue Y/N?");
+    if(doAgain =="N")break;
+    
+    }//continue
+    
+ }//big for loop
+  alert("Thank you!");
+    
+    
+    
+   </script>
+  
+  
+</head>
+<body>
+   <section>
+        <h1></h1>
+   </section>
+</body>
