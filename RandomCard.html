@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Package Race Draw a Card</title>
+    
+</head>
+<body>
+<script>
+    var input1;
+     var ranCard;
+     for(; ;){
+    for(; ;){
+    input1 = parseInt(prompt("Congratulations you have landed on a space that requires you to draw a card. To draw a card enter 1."));
+    if(input1 == 1){
+        break;
+    }//if
+    }//for
+    
+        
+        ranCard = Math.floor(Math.random() * 10);
+        if(ranCard == 1){
+            alert("You hit three green lights in a row! Move up three spaces.");
+            //break;
+        }
+        
+          if(ranCard == 2){
+            alert("You have hit a lot of traffic setting you back. Move back 4 spaces.");
+            //break;
+        }
+        
+         if(ranCard == 3){
+            alert("Congratulations you have found a shortcut move your vechile directly verticle to the space above you!");
+            //break;
+        }
+         if(ranCard == 4){
+            alert("Traffic is light, move up 3 spaces!");
+           // break;
+        }
+         if(ranCard == 5){
+            alert("You vechile has a flat tire setting you back, move back 5 spaces.");
+          // break;
+        }
+         if(ranCard == 6){
+            alert("You were speeding...but didn't get caught move up 10 spaces!");
+          // break;
+        }
+         if(ranCard == 7){
+            alert("You were speeding and got caught move back 10 spaces.");
+           // break;
+        }
+         if(ranCard == 8){
+            alert("You have hit two red lights in a row move back 2 spaces.");
+            //break;
+        }
+         if(ranCard == 9){
+            alert("Roads are clearly and weather is good, move up 2 spaces.");
+           // break;
+        }
+         if(ranCard == 10){
+             alert("It is rainging raods are becoming wet slowing traffic. Move back 2 spaces.");
+            //break;
+        }
+        //for
+        
+    
+        alert("Thanks for playing! Come back again if you land a space that requires you to draw a card.");
+     }
+     
+   
+</script>
+
+</body>
+</html>
